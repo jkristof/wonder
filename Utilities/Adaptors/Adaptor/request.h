@@ -1,6 +1,6 @@
 /*
 
-Copyright © 2000-2007 Apple, Inc. All Rights Reserved.
+Copyright ï¿½ 2000-2007 Apple, Inc. All Rights Reserved.
 
 The contents of this file constitute Original Code as defined in and are
 subject to the Apple Public Source License Version 1.1 (the 'License').
@@ -38,6 +38,7 @@ typedef	enum {
 	HTTP_POST_METHOD,
 	HTTP_HEAD_METHOD,
 	HTTP_PUT_METHOD,
+	HTTP_OPTIONS_METHOD
 } RequestMethod;
 
 typedef int (*req_getMoreContentCallback)(void *handle, void *buffer, int bufferSize, int mustFill);

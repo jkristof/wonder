@@ -1,6 +1,6 @@
 /*
 
-Copyright © 2000-2007 Apple, Inc. All Rights Reserved.
+Copyright ï¿½ 2000-2007 Apple, Inc. All Rights Reserved.
 
 The contents of this file constitute Original Code as defined in and are
 subject to the Apple Public Source License Version 1.1 (the 'License').
@@ -399,6 +399,7 @@ static const char * const GET_METHOD = "GET";
 static const char * const POST_METHOD = "POST";
 static const char * const HEAD_METHOD = "HEAD";
 static const char * const PUT_METHOD = "PUT";
+static const char * const OPTIONS_METHOD = "OPTIONS";
 
 /*
  * get_http_method() find the HTTP method for this request
@@ -414,6 +415,8 @@ static RequestMethod get_http_method(const char *method)
          return HTTP_HEAD_METHOD;
       } else if (!strcmp(method, PUT_METHOD)) { /* cern 0.9 */
          return HTTP_PUT_METHOD;
+      } else if (!strcmp(method, OPTIONS_METHOD)) {
+         return HTTP_OPTIONS_METHOD;
       } else
          return HTTP_UNKNOWN_METHOD;
    } else
